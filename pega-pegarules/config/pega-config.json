@@ -1,0 +1,31 @@
+{
+	"activities": {
+		"threshold": 100,
+		"track": [
+			]
+	},
+	"steps": {
+		"enabled": true,
+		"threshold": 10,
+		"track": [
+			"Obj-Open",
+			"Call .*"
+		]
+	},
+	"rules": {
+		"enabled": false,
+		"threshold": 5,
+		"track": [
+			"findClass.*",
+			"addToDate"
+		]
+	},
+	"functions": {
+		"enabled": false,
+		"threshold": 5,
+		"track": [
+			"findClass.*",
+			"addToDate"
+		]
+	}
+}
