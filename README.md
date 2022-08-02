@@ -15,46 +15,42 @@
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/newrelic-experimental/newrelic-experimental-FIT-template)
 ![GitHub pull requests closed](https://img.shields.io/github/issues-pr-closed/newrelic-experimental/newrelic-experimental-FIT-template)
 
-# [Project Name] [build badges go here when available]
+# Pega Instrumentation
 
->[Brief description - what is the project and value does it provide? How often should users expect to get releases? How is versioning set up? Where does this project want to go?]
+Instrumentation for Pega software.  Enables the Java Agent to monitor deep into the stack on Pega applications.
 
 ## Installation
 
-> [Include a step-by-step procedure on how to get your code installed. Be sure to include any third-party dependencies that need to be installed separately]
+To install the instrumentation:
+1. Download the latest release.
+2. In the New Relic Java Agent directory, create a directory named extensions if it does not already exist.
+3. Copy the downloaded jar files into the extensions directory
+4. Restart the Pega instance.  
 
 ## Getting Started
 
->[Simple steps to start working with the software similar to a "Hello World"]
+After installing the extensions you should start to see activity method metrics in your transactions.   
+To verify that the instrumentation has loaded correctly,  you should be able to see metrics like the following in the Metric Explorer:   
+/Supportability/WeaveInstrumentation/Loaded/com.newrelic.instrumentation.pega-*    
 
-## Usage
 
->[**Optional** - Include more thorough instructions on how to use the software. This section might not be needed if the Getting Started section is enough. Remove this section if it's not needed.]
+## Configuration
+
+The instrumentation will track a Pega Activity and can be enabled to collect metrics on Rules, Steps and Functions.   In order to keep the number of traced methods for transactions and spans for distributed traces down, there are thresholds in place so that Activities are only reported if their response time exceeds the threshold.  Additional the tracking of Rules, Steps and Functions can be enabled.  This is done via a JSON configuration file.  See for details:     
 
 ## Building
 
->[**Optional** - Include this section if users will need to follow specific instructions to build the software from source. Be sure to include any third party build dependencies that need to be installed separately. Remove this section if it's not needed.]
-
-## Testing
-
->[**Optional** - Include instructions on how to run tests if we include tests with the codebase. Remove this section if it's not needed.]
+Although the code is available,  the jar files needed to compile are not available because they are Pega proprietary.  In each lib directory there is a holder.txt that lists the necessary jar files if you can gain access to them.
 
 ## Support
 
-New Relic has open-sourced this project. This project is provided AS-IS WITHOUT WARRANTY OR DEDICATED SUPPORT. Issues and contributions should be reported to the project here on GitHub.
-
->[Choose 1 of the 2 options below for Support details, and remove the other one.]
-
->[Option 1 - no specific thread in Community]
->We encourage you to bring your experiences and questions to the [Explorers Hub](https://discuss.newrelic.com) where our community members collaborate on solutions and new ideas.
-
->[Option 2 - thread in Community]
->New Relic hosts and moderates an online forum where customers can interact with New Relic employees as well as other customers to get help and share best practices. Like all official New Relic open source projects, there's a related Community topic in the New Relic Explorers Hub.
->You can find this project's topic/threads here: [URL for Community thread]
+This instrumentation is designed to work with Pega 8.x versions.    
 
 ## Contributing
 
-We encourage your contributions to improve [Project Name]! Keep in mind when you submit your pull request, you'll need to sign the CLA via the click-through using CLA-Assistant. You only have to sign the CLA one time per project. If you have any questions, or to execute our corporate CLA, required if your contribution is on behalf of a company, please drop us an email at opensource@newrelic.com.
+ew Relic has open-sourced this project. This project is provided AS-IS WITHOUT WARRANTY OR DEDICATED SUPPORT. Issues and contributions should be reported to the project here on GitHub.
+
+We encourage you to bring your experiences and questions to the [Explorers Hub](https://discuss.newrelic.com) where our community members collaborate on solutions and new ideas.
 
 **A note about vulnerabilities**
 
@@ -62,8 +58,6 @@ As noted in our [security policy](../../security/policy), New Relic is committed
 
 If you believe you have found a security vulnerability in this project or any of New Relic's products or websites, we welcome and greatly appreciate you reporting it to New Relic through [HackerOne](https://hackerone.com/newrelic).
 
+
 ## License
-
-[Project Name] is licensed under the [Apache 2.0](http://apache.org/licenses/LICENSE-2.0.txt) License.
-
->[If applicable: [Project Name] also uses source code from third-party libraries. You can find full details on which libraries are used and the terms under which they are licensed in the third-party notices document.]
+New Relic Java Instrumentation for Vert.x Event Bus is licensed under the [Apache 2.0](http://apache.org/licenses/LICENSE-2.0.txt) License.
