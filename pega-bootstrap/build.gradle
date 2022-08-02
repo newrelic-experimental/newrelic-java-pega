@@ -12,7 +12,6 @@ dependencies {
    implementation fileTree(include: ['*.jar'], dir: '../libs')
    implementation fileTree(include: ['*.jar'], dir: '../test-lib')
    implementation fileTree(include: ['*.jar'], dir: 'lib')   
-   implementation project(':pega-pegarules')
 }
 
 jar {
