@@ -197,4 +197,9 @@ subprojects {
          throw new Exception(extDir + "NEW_RELIC_EXTENSIONS_DIR, set as '" + extDir + "'is not a valid directory.")
      }
   }
+
+  tasks.withType(JavaCompile) {
+    options.compilerArgs += ['-Xlint:deprecation']
+  }
+
 }
