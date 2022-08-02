@@ -36,7 +36,7 @@ To verify that the instrumentation has loaded correctly,  you should be able to 
 
 ## Configuration
 
-The instrumentation will track a Pega Activity and can be enabled to collect metrics on Rules, Steps and Functions.   In order to keep the number of traced methods for transactions and spans for distributed traces down, there are thresholds in place so that Activities are only reported if their response time exceeds the threshold.  Additional the tracking of Rules, Steps and Functions can be enabled.  This is done via a JSON configuration file.  See for details:     
+The instrumentation will track a Pega Activity and can be enabled to collect metrics on Rules, Steps and Functions.   In order to keep the number of traced methods for transactions and spans for distributed traces down, there are thresholds in place so that Activities are only reported if their response time exceeds the threshold.  Additional the tracking of Rules, Steps and Functions can be enabled.  This is done via a JSON configuration file.  See for details: https://github.com/newrelic-experimental/newrelic-java-pega/blob/main/Pega_Threshold_Config.md    
 
 ## Building
 
