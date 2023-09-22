@@ -9,7 +9,7 @@ dependencies {
    implementation 'javax.jms:javax.jms-api:2.0.1'
 
 
-   // New Relic Java Agent dependencies
+   // New Relic Labs Java Agent dependencies
    implementation 'com.newrelic.agent.java:newrelic-api:6.4.0'
    implementation fileTree(include: ['*.jar'], dir: '../libs')
    implementation fileTree(include: ['*.jar'], dir: '../test-lib')
@@ -18,9 +18,9 @@ dependencies {
 
 jar {
   manifest {
-    attributes 'Implementation-Title': 'com.newrelic.instrumentation.pega-pegarules'
-    attributes 'Implementation-Vendor': 'New Relic'
-    attributes 'Implementation-Vendor-Id': 'com.newrelic'
+    attributes 'Implementation-Title': 'com.newrelic.instrumentation.labs.pega-pegarules'
+    attributes 'Implementation-Vendor': 'New Relic Labs'
+    attributes 'Implementation-Vendor-Id': 'com.newrelic.labs'
     attributes 'Implementation-Version': 1.0
   }
 }
